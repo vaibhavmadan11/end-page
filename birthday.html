@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday K!</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the falling hearts and overall layout */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            background-color: #fce7f3; /* Light pink background */
+        }
+
+        .page-section {
+            min-height: 100vh; /* Each section takes full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            position: relative; /* For heart animation positioning */
+            overflow: hidden; /* Hide hearts outside the section */
+        }
+
+        .heart-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to pass through */
+            overflow: hidden;
+            z-index: 10; /* Hearts should be on top of content */
+        }
+
+        .heart {
+            position: absolute;
+            color: #ec4899; /* Pink heart color */
+            font-size: 2rem;
+            animation: fall linear infinite;
+            opacity: 0; /* Start invisible */
+            text-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(var(--x-offset, 0));
+                opacity: 0;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .page-section {
+                padding: 1rem;
+            }
+            .text-5xl {
+                font-size: 2.5rem; /* Smaller heading on mobile */
+            }
+            .text-2xl {
+                font-size: 1.25rem; /* Smaller text on mobile */
+            }
+            .heart {
+                font-size: 1.5rem; /* Smaller hearts on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Happy Birthday K -->
+    <section id="page1" class="page-section bg-pink-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-pink-600 mb-4 animate-bounce">
+            Happy Birthday K <span class="text-red-500">💖</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-700 max-w-2xl">
+            (I told you not to keep your expectations high but okay, read this now)
+        </p>
+    </section>
+
+    <!-- Page 2: Main Birthday Message -->
+    <section id="page2" class="page-section bg-purple-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h2 class="text-4xl md:text-5xl font-bold text-purple-700 mb-6">
+            HAPPYYYY BIRTHDAYYYY COUGARRRRRR
+        </h2>
+        <p class="text-lg md:text-xl text-gray-800 leading-relaxed max-w-4xl text-left">
+            I don’t even know where to begin because honestly how do you write a birthday message for someone who in the span of such a short time has started meaning so much.
+            <br><br>
+            It’s crazy to think that we first talked just a month ago. It also feels like I’ve known you forever. Maybe that’s just what happens when someone’s vibe just clicks with yours, from random ass conversation to texting all night and to late-night calls. From your sarcasm to the way you say "**acha**," everything just stuck in the most comforting, addictive way.
+            <br><br>
+            You have no idea what your presence has done to my days. Even on rough ones, somehow a small "**aww**" from you, or even when you tease me or call me something silly or dumb (yes, talking about **COUGAR CHASER**), it fixes things. You have this soft magic about you that you don’t even realize.
+            <br><br>
+            And you know that line you once said, "**mai yha rhti na tere sath**." You don’t know this, but that stayed with me, like really stayed. It’s rare to come across people who say things like that and actually mean it, and with you, I’ve never even doubted it for a second.
+            <br><br>
+            Also, there’s this one thing: when you say something and I just go, "**fuck broooo**," and you’re like, "**kya hua?**" And I always say, "jo hua wohi toh nahi bata sakta haha." It’s just that sometimes in that moment I realize how surreal everything feels and how you are just too good to be true in the bestttttt way possible. Like, I honestly believe you’re the best and the cutest person alive on this planet (another hit on you type line, I know haha, my daily bad one-liners), but still the real answer to "kya hua" is "jo horha hai woh bata nahi sakta hehe."
+            <br><br>
+            I love how easy it is to talk to you, how I don’t need to pretend or hold back, how I get shy over the tiniest things you say and end up smiling like an idiot in the middle of the night. You’ve genuinely become the best part of my day, every single day.
+            <br><br>
+            And okay, let me just say it: the **nose ring**. Yeah, that’s unfair. That's a cheat code. Idk, that is sooooo cute, the cutest thinggggg. I love it, LIKE LOVEEEEEE THE NOSE RING. Again, it might not be the nose ring uhm...
+            <br><br>
+            Yeah, so sometimes I just look back and wonder how fast this all happened. But I’ve stopped questioning it. Some people just walk in at the right time and feel right effortlessly, and you’re that kind of person for me.
+            <br><br>
+            So yeah, happy birthday to the cutest, weirdest, funniest, most adorably annoying girl I’ve ever met. You’ve added something to my life without even trying. I hope your day is full of joy, laughter, and not falling or getting hurt 34 times😭. I know you're on your periods, but just remember someone far away is smiling too, just thinking of you and this unexpected little connection that somehow feels a lot more than just… random.
+            <br><br>
+            Okay bye. I didn’t say anything obvious but if you read between the lines… maybe you’ll get it 💕
+            <br>
+            (and if you don’t I’ll still call you cute anyway!)
+        </p>
+    </section>
+
+    <!-- Reason 1 -->
+    <section id="reason1" class="page-section bg-blue-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-blue-700 mb-4">
+            1. The way you say acha OR ANYTHING 😭✋🏼
+        </h3>
+    </section>
+
+    <!-- Reason 2 -->
+    <section id="reason2" class="page-section bg-green-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-green-700 mb-4">
+            2. Your nose ring like what is that accessory be making me crazyyyy
+        </h3>
+    </section>
+
+    <!-- Reason 3 -->
+    <section id="reason3" class="page-section bg-yellow-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-yellow-700 mb-4">
+            3. The way you go from sarcasm to genuine softness in 0.2 seconds
+        </h3>
+    </section>
+
+    <!-- Reason 4 -->
+    <section id="reason4" class="page-section bg-red-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-red-700 mb-4">
+            4. Your kya hua? whenever I go “fuck broooo” like ma’am I’m overwhelmed by you that’s what
+        </h3>
+    </section>
+
+    <!-- Reason 5 -->
+    <section id="reason5" class="page-section bg-indigo-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-indigo-700 mb-4">
+            5. Your anger that somehow ends up sounding cute instead of scary
+        </h3>
+    </section>
+
+    <!-- Reason 6 -->
+    <section id="reason6" class="page-section bg-pink-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-pink-700 mb-4">
+            6. How you call me budhu and somehow I like it way too much??
+        </h3>
+    </section>
+
+    <!-- Reason 7 -->
+    <section id="reason7" class="page-section bg-purple-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-purple-700 mb-4">
+            7. How easily you make me smile without even trying like??? control yourself
+        </h3>
+    </section>
+
+    <!-- Reason 8 -->
+    <section id="reason8" class="page-section bg-blue-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-blue-700 mb-4">
+            8. Your little aww moments like even a tiny one sends me into shy mode
+        </h3>
+    </section>
+
+    <!-- Reason 9 -->
+    <section id="reason9" class="page-section bg-green-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-green-700 mb-4">
+            9. That comforting vibe you carry like you really meant it when you said “mai yha rhti na tere sth”
+        </h3>
+    </section>
+
+    <!-- Reason 10 -->
+    <section id="reason10" class="page-section bg-yellow-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-yellow-700 mb-4">
+            10. Your random voice notes that stay in my head rent-free
+        </h3>
+    </section>
+
+    <!-- Reason 11 -->
+    <section id="reason11" class="page-section bg-red-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-red-700 mb-4">
+            11. The way you lowkey care about me without saying much, just doing little things
+        </h3>
+    </section>
+
+    <!-- Reason 12 -->
+    <section id="reason12" class="page-section bg-indigo-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h3 class="text-3xl md:text-4xl font-semibold text-indigo-700 mb-4">
+            12. The fact that you exist like this and actually talk to me HOWWW is that even real?
+        </h3>
+    </section>
+
+    <!-- Final Page: Spotify Link -->
+    <section id="final-page" class="page-section bg-pink-100 rounded-lg shadow-xl m-4">
+        <div class="heart-container"></div>
+        <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-6">
+            And now listen to the playlist I made for you!
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-800 max-w-2xl">
+            Just message me the link on WhatsApp!
+        </p>
+        <!-- Placeholder for the Spotify link. You will need to provide the actual link when you send it. -->
+        <a href="https://open.spotify.com/playlist/7jWmfgWQUSKALobmlDnFEx?si=raNuzMnAR12NoOP0V725IQ&pi=qWAPYGoXSCq4a" target="_blank" class="mt-8 px-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+            Click here for the playlist!
+        </a>
+        <p class="text-sm text-gray-500 mt-2">
+            (If the link doesn't work, please ask me for the correct one on WhatsApp!)
+        </p>
+    </section>
+
+    <script>
+        // JavaScript for falling hearts animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const heartContainers = document.querySelectorAll('.heart-container');
+
+            heartContainers.forEach(container => {
+                // Function to create a single heart
+                function createHeart() {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '💖'; // Heart emoji
+                    
+                    // Random starting position (x-axis)
+                    const startX = Math.random() * 100;
+                    heart.style.left = `${startX}vw`;
+
+                    // Random animation duration for variety
+                    const duration = Math.random() * 5 + 5; // 5 to 10 seconds
+                    heart.style.animationDuration = `${duration}s`;
+
+                    // Random delay to stagger appearance
+                    const delay = Math.random() * 2; // 0 to 2 seconds
+                    heart.style.animationDelay = `${delay}s`;
+
+                    // Random horizontal drift (x-offset for animation)
+                    const xOffset = (Math.random() - 0.5) * 20; // -10 to 10 vw
+                    heart.style.setProperty('--x-offset', `${xOffset}vw`);
+
+                    // Random font size for variety
+                    const fontSize = Math.random() * 1.5 + 1; // 1rem to 2.5rem
+                    heart.style.fontSize = `${fontSize}rem`;
+
+                    container.appendChild(heart);
+
+                    // Remove heart after animation completes to prevent memory leak
+                    heart.addEventListener('animationend', () => {
+                        heart.remove();
+                    });
+                }
+
+                // Create hearts at intervals
+                setInterval(createHeart, 500); // Create a new heart every 0.5 seconds
+            });
+        });
+    </script>
+</body>
+</html>
